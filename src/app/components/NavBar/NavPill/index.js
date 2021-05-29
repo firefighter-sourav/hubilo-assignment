@@ -10,7 +10,12 @@ const NavPill = (props) => {
       {label}
     </Styles.StyledDiv>
   ) : (
-    <Styles.StyledLink to={path}>
+    <Styles.StyledLink
+      to={path}
+      activeStyle={{
+        borderColor: 'gold',
+      }}
+    >
       {showCount ? <Styles.CircleBadge>{count} </Styles.CircleBadge> : null}
       {label}
     </Styles.StyledLink>

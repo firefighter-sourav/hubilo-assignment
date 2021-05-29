@@ -1,4 +1,7 @@
 import Swal from 'sweetalert2'
+/**
+ * Common helper functions here
+ */
 
 /**
  * Checks if the passed variable is empty or not.

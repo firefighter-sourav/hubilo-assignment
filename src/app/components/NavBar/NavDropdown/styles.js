@@ -4,6 +4,12 @@ import styled from 'styled-components'
 import { FlexCenter } from 'app/configs/commonStyles'
 import { colors } from 'app/themes/colorPalette'
 
+import { BaseNavPill } from '../NavPill/styles'
+
+export const Wrapper = styled.div`
+  ${BaseNavPill}
+`
+
 export const Select = styled.select`
   display: flex;
   flex-direction: center;
@@ -21,9 +27,20 @@ export const Select = styled.select`
   background: ${colors.black};
   color: white;
 `
-export const Option = styled.option`
-  font-size: 16px;
+export const StyledPill = styled(FlexCenter)`
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
 `
-export const StyledLink = styled(Link)`
-  text-decoration: none;
+export const Popper = styled.div`
+  display: ${(props) => (props.show ? 'block' : 'none')};
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+  height: 160px;
+  background: ${colors.black};
+  border-radius: 8px;
+  & > a {
+    margin-top: 10px;
+  }
 `

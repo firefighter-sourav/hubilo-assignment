@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router'
+import React, { useRef, useState } from 'react'
 
+import { Icon } from 'app/configs/commonStyles'
+import useOutsideAlerter from 'app/hooks/useOutsideAlerter'
 import { _albums } from 'app/store/selectors/albums'
 import { _todos } from 'app/store/selectors/todos'
 import { _users } from 'app/store/selectors/users'
+import DownArrow from 'assets/images/DownArrow.svg'
 
 import * as Styles from './styles'
 
@@ -17,21 +17,21 @@ import UsersNavItem from '../UsersNavItem'
  */
 
 const NavDropdown = () => {
-  const history = useHistory()
-  const go = (e) => {
-    e.persist()
-    if (e.target.value !== '') {
-      history.push(e.target.value)
-    }
-  }
+  const [isOpen, setIsOpen] = useState(false)
+  const wrapperRef = useRef(null)
+  useOutsideAlerter(wrapperRef, () => {
+    setIsOpen(false)
+  })
   return (
-    <Styles.Select onChange={go} defaultValue="">
-      <Styles.Option disabled value="">
-        More
-      </Styles.Option>
-      <UsersNavItem />
-      <TodosNavItem />
-    </Styles.Select>
+    <Styles.Wrapper ref={wrapperRef}>
+      <Styles.StyledPill onClick={() => setIsOpen(true)}>
+        <Icon invert src={DownArrow} />
+      </Styles.StyledPill>
+      <Styles.Popper show={isOpen}>
+        <UsersNavItem />
+        <TodosNavItem />
+      </Styles.Popper>
+    </Styles.Wrapper>
   )
 }
 NavDropdown.propTypes = {}

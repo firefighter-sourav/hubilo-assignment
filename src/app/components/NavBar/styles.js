@@ -9,6 +9,7 @@ export const Wrapper = styled(Flex)`
   width: 100%;
   padding: 0 20%;
   align-items: center;
+  overflow: none;
 `
 export const CircleBadge = styled(FlexCenter)`
   height: 30px;

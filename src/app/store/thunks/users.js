@@ -6,6 +6,13 @@ import {
   fetchUsersSuccess,
 } from '../actions/users'
 
+/**
+ * Thunk fetchUsersHandler
+ * Calls the fetch users api
+ * Receives 100 users entries
+ * On Success/Failure
+ *  updates the store
+ */
 export const fetchUsersHandler = () => {
   return (dispatch) => {
     dispatch(fetchUsersStart())

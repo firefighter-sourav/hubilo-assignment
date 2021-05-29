@@ -9,7 +9,7 @@ import BaseItem from '../BaseItem'
 /**
  * Generic List for all of similar types list view
  * Renders a list of items
- * This list can be optimized using react-virtualized/react-window
+ * This list can be optimized using react virtualized
  */
 const BaseList = (props) => {
   const { data } = props
@@ -17,7 +17,7 @@ const BaseList = (props) => {
   return (
     <Styles.Wrapper>
       {data.map((item) => (
-        <BaseItem key={item.id} item={item} />
+        <BaseItem key={item.id + item.title} item={item} />
       ))}
     </Styles.Wrapper>
   )

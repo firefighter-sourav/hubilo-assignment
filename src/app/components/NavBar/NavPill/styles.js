@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 import { FlexCenter } from 'app/configs/commonStyles'
 import { colors } from 'app/themes/colorPalette'
 
-const BaseNavPill = css`
+export const BaseNavPill = css`
   display: flex;
   flex-direction: center;
   align-items: center;
@@ -12,6 +12,7 @@ const BaseNavPill = css`
   width: 200px;
   height: 70%;
   margin: 0 10px;
+  max-height: 60px;
   font-size: 18px;
   text-decoration: none;
   border-radius: 8px;
@@ -19,10 +20,11 @@ const BaseNavPill = css`
   color: white;
   font-weight: bold;
 `
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
   ${BaseNavPill}
 `
-export const StyledDiv = styled.div`
+export const StyledDiv = styled.a`
+  text-decoration: none;
   cursor: not-allowed;
   opacity: 0.3;
   ${BaseNavPill}
