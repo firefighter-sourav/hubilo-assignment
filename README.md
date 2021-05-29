@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Assignment Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Assignent Details
 
-## Available Scripts
+### Problem Statement
 
-In the project directory, you can run:
+#### Link to fetch data - https://jsonplaceholder.typicode.com/
 
-### `npm start`
+Create a navigation bar with the following links/tabs - 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Posts, Albums. A dropdown with users and todos fields. (Total of 2 tabs plus a dropdown): All tabs should have a badge reflected showing the count of the particular quantity. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+- Only the first tab should be active. Posts tab. When clicked on the posts tab get the data from the /posts api. Kindly refer to the above link. 
+- Only after fetching the data from the POSTS tab , you should enable the Albums tab. Once the data is fetched you need to update the total posts count on the badge. 
+- Try to add a post - using the post api from the above link. Whenever you add a post - the count needs to be updated on the badge of the posts tab. 
+- When you click on the Albums tab, fetch all the albums list and display it. Only after fetching the albums list - the dropdown should become active. At the same time the albums count on the badge needs to be updated. 
+- When clicked on the users dropdown - fetch users data. On the top display the total of posts and albums count which was fetched in the previous tabs.DISPLAY ONLY COUNT above the users list. 
+- When clicked on the todos menuitem, fetch the todos data and display the total count of users above the todos list. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Use the following for your coding:
+- Redux for global state management. 
+- UseContext - Where ever necessary.
+- Use react hooks and functional components only to implement any logic or build the components.
+- Use react-routing for navigating between pages. 
+- Use lazy loading and code splitting if possible.
