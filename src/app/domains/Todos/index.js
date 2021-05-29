@@ -7,14 +7,16 @@ import { Flex } from 'app/configs/commonStyles'
 import { fetchTodosDispatch } from 'app/store/dispatchers/todos'
 import { _albums } from 'app/store/selectors/albums'
 import { _todos } from 'app/store/selectors/todos'
+import { _users } from 'app/store/selectors/users'
 
 import * as Styles from './styles'
 
 const Todos = () => {
+  const users = useSelector(_users)
   const todos = useSelector(_todos)
   const [structuredData, setStructuredData] = useState([])
   useEffect(() => {
-    if (!todos.requestProcessed) {
+    if (!todos.requestProcessed && users.requestProcessed) {
       fetchTodosDispatch()
     }
   }, [])

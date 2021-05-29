@@ -9,7 +9,11 @@ import * as Styles from './styles'
  */
 const Button = (props) => {
   const { children, onClick } = props
-  return <Styles.Wrapper onClick={onClick}>{children}</Styles.Wrapper>
+  return (
+    <Styles.Wrapper data-testid="config-button" onClick={onClick}>
+      {children}
+    </Styles.Wrapper>
+  )
 }
 Button.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-import BaseFields from './BaseFields'
-
+import BaseFields from '../BaseFields'
 import Button from '../Button'
 import Modal from '../Modal'
 /**
@@ -11,7 +10,7 @@ import Modal from '../Modal'
  * onSubmit of the modal form entries will be created
  * useContext hook is used for data passing
  */
-const BaseInput = (props) => {
+const BaseInput = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>

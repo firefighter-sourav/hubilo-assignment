@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { _albumsCount } from 'app/store/selectors/albums'
-import { _postsCount } from 'app/store/selectors/posts'
-import { _usersCount } from 'app/store/selectors/users'
-
 import * as Styles from './styles'
 /**
  * Generic Pill to show count of item

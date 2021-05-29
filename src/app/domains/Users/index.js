@@ -12,10 +12,11 @@ import { _users } from 'app/store/selectors/users'
 import * as Styles from './styles'
 
 const Users = () => {
+  const albums = useSelector(_albums)
   const users = useSelector(_users)
   const [structuredData, setStructuredData] = useState([])
   useEffect(() => {
-    if (!users.requestProcessed) {
+    if (!users.requestProcessed && albums.requestProcessed) {
       fetchUsersDispatch()
     }
   }, [])

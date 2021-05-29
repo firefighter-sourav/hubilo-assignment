@@ -7,7 +7,7 @@ import FieldsContext from 'app/contexts/FieldsContext'
 
 import * as Styles from './styles'
 
-import Button from '../../Button'
+import Button from '../Button'
 
 /**
  * BaseFields is a seperate component from BaseInput because of formData

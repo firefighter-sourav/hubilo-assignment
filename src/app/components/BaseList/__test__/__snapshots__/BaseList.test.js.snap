@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-bdnxRM eaWVJw"
+>
+  <div
+    className="sc-gtsrHT ckIFxw"
+  >
+    <div
+      className="sc-dlnjwi dHpSnY"
+    >
+      Hello
+    </div>
+    <div
+      className="sc-hKFxyN cqFfPS"
+    >
+      id
+      : 
+      1
+    </div>
+    <div
+      className="sc-hKFxyN cqFfPS"
+    >
+      content
+      : 
+      There
+    </div>
+  </div>
+  <div
+    className="sc-gtsrHT ckIFxw"
+  >
+    <div
+      className="sc-dlnjwi dHpSnY"
+    >
+      World
+    </div>
+    <div
+      className="sc-hKFxyN cqFfPS"
+    >
+      id
+      : 
+      1
+    </div>
+    <div
+      className="sc-hKFxyN cqFfPS"
+    >
+      content
+      : 
+      God is almighty
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-bdnxRM sc-gtsrHT sc-dlnjwi kGFBfj NYOTq cDfNFq"
+  data-testid="config-button"
+  onClick={[MockFunction]}
+>
+  Submit
+</div>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-dlnjwi kONwXc"
+>
+  <div
+    className="sc-bdnxRM sc-gKAaRy kGFBfj fIBEnI"
+  >
+    <div
+      className="sc-bdnxRM sc-gtsrHT sc-iCoGMd kGFBfj NYOTq giQWvX"
+      data-testid="config-button"
+      onClick={[Function]}
+    >
+      Save
+    </div>
+  </div>
+</div>
+`;

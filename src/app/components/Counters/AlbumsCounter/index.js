@@ -7,9 +7,8 @@ import BaseCounter from '../BaseCounter'
 /**
  * Shows a Pill with count of albums
  */
-const AlbumsCounter = (props) => {
+const AlbumsCounter = () => {
   const albumsCount = useSelector(_albumsCount)
-
   return <BaseCounter name="Albums" count={albumsCount} />
 }
 

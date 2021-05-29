@@ -6,6 +6,7 @@ import BaseList from 'app/components/BaseList'
 import FieldsContext from 'app/contexts/FieldsContext'
 import { fetchAlbumsDispatch } from 'app/store/dispatchers/albums'
 import { _albums } from 'app/store/selectors/albums'
+import { _posts } from 'app/store/selectors/posts'
 import { createAlbumsHandler } from 'app/store/thunks/albums'
 
 import * as Styles from './styles'
@@ -13,11 +14,12 @@ import * as Styles from './styles'
 const fields = ['userId', 'title']
 
 const Albums = () => {
+  const posts = useSelector(_posts)
   const albums = useSelector(_albums)
   const [structuredData, setStructuredData] = useState([])
   const dispatch = useDispatch()
   useEffect(() => {
-    if (!albums.requestProcessed) {
+    if (!albums.requestProcessed && posts.requestProcessed) {
       fetchAlbumsDispatch()
     }
   }, [])
