@@ -14,8 +14,6 @@ import Button from '../../Button'
  * formData is state so updating will rerender the component including the modal
  * Updating the modal everytime just for input change is not efficient
  *
- * @param {object} props
- * @returns <React.Component>
  */
 const BaseFields = (props) => {
   const { closeModal } = props

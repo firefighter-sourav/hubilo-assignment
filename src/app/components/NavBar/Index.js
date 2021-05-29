@@ -6,7 +6,10 @@ import PostsNavItem from './PostsNavItem'
 import * as Styles from './styles'
 
 import Spinner from '../Spinner'
-
+/**
+ * Navigation bar which is being used MainLayout
+ * Each Items are seperate to avoid unnecessary rendering
+ */
 const NavBar = () => {
   return (
     <Styles.Wrapper>

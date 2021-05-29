@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-
+/**
+ * All common styles here
+ */
 export const Flex = styled.div`
   display: flex;
 `

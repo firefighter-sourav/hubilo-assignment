@@ -7,7 +7,10 @@ import Cross from 'assets/images/Cross.svg'
 import * as Styles from './styles'
 
 ModalComponent.setAppElement('body')
-
+/**
+ * Generic Modal Wrapper made on top of react-modal
+ * Accepts title and generic content styles
+ */
 const Modal = (props) => {
   return (
     <ModalComponent

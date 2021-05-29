@@ -4,6 +4,13 @@ import BaseFields from './BaseFields'
 
 import Button from '../Button'
 import Modal from '../Modal'
+/**
+ * BaseInput is the generic component for creating entries
+ * A Button will be visible on the ui
+ * onClick of the button modal will open
+ * onSubmit of the modal form entries will be created
+ * useContext hook is used for data passing
+ */
 const BaseInput = (props) => {
   const [isOpen, setIsOpen] = useState(false)
   return (

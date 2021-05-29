@@ -11,6 +11,11 @@ import * as Styles from './styles'
 
 import TodosNavItem from '../TodosNavItem'
 import UsersNavItem from '../UsersNavItem'
+
+/**
+ * Dropdown of Menu
+ */
+
 const NavDropdown = () => {
   const history = useHistory()
   const go = (e) => {

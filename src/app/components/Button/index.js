@@ -2,6 +2,11 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import * as Styles from './styles'
+
+/**
+ * Generic Button to use in all the places through out the website
+ * Pass onClick function to handle button click
+ */
 const Button = (props) => {
   const { children, onClick } = props
   return <Styles.Wrapper onClick={onClick}>{children}</Styles.Wrapper>

@@ -6,7 +6,10 @@ import { _postsCount } from 'app/store/selectors/posts'
 import { _usersCount } from 'app/store/selectors/users'
 
 import * as Styles from './styles'
-
+/**
+ * Generic Pill to show count of item
+ * Pure function to avoid side effects
+ */
 const BaseCounter = (props) => {
   const { name, count } = props
 

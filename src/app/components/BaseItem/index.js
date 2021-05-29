@@ -5,8 +5,8 @@ import * as Styles from './styles'
 
 /**
  * Generic item for all of similar types item view
- * @param {object} props
- * @returns Individual item
+ * Individual Item for list view
+ * List can be optimized by react-virtualized/react-window
  */
 const BaseItem = (props) => {
   const {

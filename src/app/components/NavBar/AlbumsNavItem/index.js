@@ -5,6 +5,12 @@ import { _albums } from 'app/store/selectors/albums'
 import { _posts } from 'app/store/selectors/posts'
 
 import NavPill from '../NavPill'
+
+/**
+ * This is logic part of albums tab
+ * Design part has been seperated
+ */
+
 const AlbumsNavItem = () => {
   const albums = useSelector(_albums)
   const posts = useSelector(_posts)

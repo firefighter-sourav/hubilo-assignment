@@ -4,6 +4,9 @@ import React from 'react'
 import NavBar from 'app/components/NavBar/Index'
 
 import * as Styles from './styles'
+/**
+ * MainLayout Wrapper Component
+ */
 const MainLayout = (props) => {
   return (
     <>

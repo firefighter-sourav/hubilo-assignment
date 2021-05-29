@@ -8,6 +8,9 @@ import { _users } from 'app/store/selectors/users'
 
 import StyledSpinner from './styles'
 
+/**
+ * Custom spinner for loader purposes
+ */
 const Spinner = () => {
   const posts = useSelector(_posts)
   const albums = useSelector(_albums)

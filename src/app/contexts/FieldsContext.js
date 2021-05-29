@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 /**
- * BaseFields context
+ * BaseFields context used in BaseInput
  */
 const FieldsContext = createContext({
   fields: [] /** array of field names */,

@@ -8,8 +8,8 @@ import * as Styles from './styles'
 import BaseItem from '../BaseItem'
 /**
  * Generic List for all of similar types list view
- * @param {object} props
- * @returns List of items
+ * Renders a list of items
+ * This list can be optimized using react-virtualized/react-window
  */
 const BaseList = (props) => {
   const { data } = props
