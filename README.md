@@ -1,6 +1,6 @@
 # Assignment Project
 
-## Assignent Details
+## Assigment Details
 
 ### Problem Statement
 
@@ -18,10 +18,15 @@ Posts, Albums. A dropdown with users and todos fields. (Total of 2 tabs plus a d
 - When clicked on the users dropdown - fetch users data. On the top display the total of posts and albums count which was fetched in the previous tabs.DISPLAY ONLY COUNT above the users list. 
 - When clicked on the todos menuitem, fetch the todos data and display the total count of users above the todos list. 
 
-
 ### Use the following for your coding:
 - Redux for global state management. 
 - UseContext - Where ever necessary.
 - Use react hooks and functional components only to implement any logic or build the components.
 - Use react-routing for navigating between pages. 
 - Use lazy loading and code splitting if possible.
+
+### What we would like to see is :
+- The proper usage of Redux with efficient use of react hooks. 
+- Proper usage of ES6 features. 
+- Error logging and Error handling. 
+- Application level logic approach.
