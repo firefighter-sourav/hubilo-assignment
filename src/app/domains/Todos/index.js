@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 import BaseList from 'app/components/BaseList'
 import UsersCounter from 'app/components/Counters/UsersCounter'
+import RestrictedAccess from 'app/components/RestrictedAccess'
 import { Flex } from 'app/configs/commonStyles'
 import { fetchTodosDispatch } from 'app/store/dispatchers/todos'
 import { _albums } from 'app/store/selectors/albums'
@@ -32,13 +33,15 @@ const Todos = () => {
       }))
     )
   }, [todos])
-  return (
+  return users.requestProcessed ? (
     <Styles.Wrapper>
       <Flex>
         <UsersCounter />
       </Flex>
       <BaseList data={structuredData} />
     </Styles.Wrapper>
+  ) : (
+    <RestrictedAccess>Users page is still not opened</RestrictedAccess>
   )
 }
 Todos.propTypes = {}
