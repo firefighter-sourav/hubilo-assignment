@@ -10,11 +10,12 @@ import * as Styles from './styles'
  */
 const BaseItem = (props) => {
   const {
+    style,
     item: { title, body },
   } = props
 
   return (
-    <Styles.Wrapper>
+    <Styles.Wrapper style={style}>
       <Styles.Title>{title}</Styles.Title>
       {Object.keys(body).map((key, index) => (
         <Styles.Body key={body[key] + index}>
@@ -26,6 +27,9 @@ const BaseItem = (props) => {
 }
 BaseItem.propTypes = {
   item: PropTypes.object.isRequired,
+  style: PropTypes.object,
 }
-BaseItem.defaultProps = {}
+BaseItem.defaultProps = {
+  style: {},
+}
 export default memo(BaseItem)

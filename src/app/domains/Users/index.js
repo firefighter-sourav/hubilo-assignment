@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import BaseList from 'app/components/BaseList'
 import AlbumsCounter from 'app/components/Counters/AlbumsCounter'
 import PostsCounter from 'app/components/Counters/PostsCounter'
+import RestrictedAccess from 'app/components/RestrictedAccess'
 import { Flex } from 'app/configs/commonStyles'
 import { fetchUsersDispatch } from 'app/store/dispatchers/users'
 import { _albums } from 'app/store/selectors/albums'
@@ -33,7 +34,7 @@ const Users = () => {
       }))
     )
   }, [users])
-  return (
+  return albums.requestProcessed ? (
     <Styles.Wrapper>
       <Flex>
         <PostsCounter />
@@ -41,6 +42,8 @@ const Users = () => {
       </Flex>
       <BaseList data={structuredData} />
     </Styles.Wrapper>
+  ) : (
+    <RestrictedAccess>Albums tab is still not clicked</RestrictedAccess>
   )
 }
 Users.propTypes = {}

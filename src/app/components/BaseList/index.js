@@ -1,5 +1,11 @@
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useRef } from 'react'
+import {
+  List,
+  AutoSizer,
+  CellMeasurer,
+  CellMeasurerCache,
+} from 'react-virtualized'
 
 import { _posts } from 'app/store/selectors/posts'
 
@@ -13,12 +19,47 @@ import BaseItem from '../BaseItem'
  */
 const BaseList = (props) => {
   const { data } = props
+  const cache = useRef(
+    new CellMeasurerCache({
+      fixedWidth: true,
+      defaultHeight: 100,
+    })
+  )
 
   return (
     <Styles.Wrapper>
-      {data.map((item) => (
-        <BaseItem key={item.id + item.title} item={item} />
-      ))}
+      <AutoSizer>
+        {({ width, height }) => (
+          <List
+            width={width}
+            height={height}
+            rowHeight={cache.current.rowHeight}
+            deferredMeasurementCache={cache.current}
+            rowCount={data.length}
+            rowRenderer={({ key, index, style, parent }) => {
+              const item = data[index]
+              return (
+                <CellMeasurer
+                  key={key}
+                  cache={cache.current}
+                  parent={parent}
+                  columnIndex={0}
+                  rowIndex={index}
+                >
+                  {({ registerChild }) => (
+                    <BaseItem
+                      ref={registerChild}
+                      style={style}
+                      key={item.id + item.title}
+                      item={item}
+                    />
+                  )}
+                </CellMeasurer>
+              )
+            }}
+          />
+        )}
+      </AutoSizer>
     </Styles.Wrapper>
   )
 }

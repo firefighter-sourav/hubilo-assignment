@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import BaseInput from 'app/components/BaseInput'
 import BaseList from 'app/components/BaseList'
+import RestrictedAccess from 'app/components/RestrictedAccess'
 import FieldsContext from 'app/contexts/FieldsContext'
 import { fetchAlbumsDispatch } from 'app/store/dispatchers/albums'
 import { _albums } from 'app/store/selectors/albums'
@@ -35,7 +36,7 @@ const Albums = () => {
   const handleCreateFormSubmit = (formData) => {
     dispatch(createAlbumsHandler(formData))
   }
-  return (
+  return posts.requestProcessed ? (
     <FieldsContext.Provider
       value={{
         fields,
@@ -47,6 +48,8 @@ const Albums = () => {
         <BaseList data={structuredData} />
       </Styles.Wrapper>
     </FieldsContext.Provider>
+  ) : (
+    <RestrictedAccess>Posts tab is still not clicked</RestrictedAccess>
   )
 }
 Albums.propTypes = {}
